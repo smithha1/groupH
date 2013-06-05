@@ -1,0 +1,21 @@
+ls
+vim bacula-sd.confi
+vim bacula-dir.confi
+
+:wq    <--Will write and quit-->
+
+/ect/init.d/bacula-director reload
+/ect/init.d/bacula-sd force-reload
+
+mkdir storage
+mkdir data_to_backup
+
+ls <--To check that it worked-->
+
+chown bacula storage
+ls -l
+
+rm [file you want to remove]
+
+touch test1 <--Create a test file-->
+re test1 <--Will remove the test file-->

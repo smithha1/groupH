@@ -1,0 +1,192 @@
+login as: wongsl1
+wongsl1@10.25.1.82's password:
+Linux groupHad 2.6.32-5-amd64 #1 SMP Sun Sep 23 10:07:46 UTC 2012 x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue Mar 26 13:36:22 2013 from 10.118.24.19
+wongsl1@groupHad:~$ su
+Password:
+root@groupHad:/home/wongsl1# apt-get install sudo
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  sudo
+0 upgraded, 1 newly installed, 0 to remove and 19 not upgraded.
+Need to get 610 kB of archives.
+After this operation, 983 kB of additional disk space will be used.
+Err http://ftp.nz.debian.org/debian/ squeeze/main sudo amd64 1.7.4p4-2.squeeze.3
+  Could not resolve 'ftp.nz.debian.org'
+Err http://security.debian.org/ squeeze/updates/main sudo amd64 1.7.4p4-2.squeeze.3
+  Could not resolve 'security.debian.org'
+Failed to fetch http://security.debian.org/pool/updates/main/s/sudo/sudo_1.7.4p4-2.squeeze.3_amd64.deb  Could not resolve 'security.debian.org'
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+root@groupHad:/home/wongsl1# apt-get install sudo
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  sudo
+0 upgraded, 1 newly installed, 0 to remove and 19 not upgraded.
+Need to get 610 kB of archives.
+After this operation, 983 kB of additional disk space will be used.
+Get:1 http://ftp.nz.debian.org/debian/ squeeze/main sudo amd64 1.7.4p4-2.squeeze.3 [610 kB]
+Fetched 610 kB in 0s (1,658 kB/s)
+Selecting previously deselected package sudo.
+(Reading database ... 25935 files and directories currently installed.)
+Unpacking sudo (from .../sudo_1.7.4p4-2.squeeze.3_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up sudo (1.7.4p4-2.squeeze.3) ...
+No /etc/sudoers found... creating one for you.
+root@groupHad:/home/wongsl1# adduser wongsl1 sudo
+Adding user `wongsl1' to group `sudo' ...
+Adding user wongsl1 to group sudo
+Done.
+root@groupHad:/home/wongsl1# apt-cache search mysql-server
+auth2db - Powerful and eye-candy IDS logger, log viewer and alert generator
+cacti - Frontend to rrdtool for monitoring systems and services
+torrentflux - web based, feature-rich BitTorrent download manager
+mysql-server - MySQL database server (metapackage depending on the latest version)
+mysql-server-5.1 - MySQL database server binaries and system database setup
+mysql-server-core-5.1 - MySQL database server binaries
+root@groupHad:/home/wongsl1# ^C
+root@groupHad:/home/wongsl1# sudo apt-get install mysql-server
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  libdbd-mysql-perl libdbi-perl libhtml-template-perl libmysqlclient16
+  libnet-daemon-perl libplrpc-perl mysql-client-5.1 mysql-common
+  mysql-server-5.1 mysql-server-core-5.1
+Suggested packages:
+  libipc-sharedcache-perl libterm-readkey-perl tinyca
+The following NEW packages will be installed:
+  libdbd-mysql-perl libdbi-perl libhtml-template-perl libmysqlclient16
+  libnet-daemon-perl libplrpc-perl mysql-client-5.1 mysql-common mysql-server
+  mysql-server-5.1 mysql-server-core-5.1
+0 upgraded, 11 newly installed, 0 to remove and 19 not upgraded.
+Need to get 24.1 MB of archives.
+After this operation, 61.0 MB of additional disk space will be used.
+Do you want to continue [Y/n]? Y
+Get:1 http://ftp.nz.debian.org/debian/ squeeze/main libnet-daemon-perl all 0.43-1 [46.6 kB]
+Get:2 http://ftp.nz.debian.org/debian/ squeeze/main libplrpc-perl all 0.2020-2 [36.0 kB]
+Get:3 http://ftp.nz.debian.org/debian/ squeeze/main libdbi-perl amd64 1.612-1 [883 kB]
+Get:4 http://ftp.nz.debian.org/debian/ squeeze/main libdbd-mysql-perl amd64 4.016-1 [140 kB]
+Get:5 http://ftp.nz.debian.org/debian/ squeeze/main libhtml-template-perl all 2.9-2 [65.9 kB]
+Get:6 http://security.debian.org/ squeeze/updates/main mysql-common all 5.1.66-0+squeeze1 [77.9 kB]
+Get:7 http://security.debian.org/ squeeze/updates/main libmysqlclient16 amd64 5.1.66-0+squeeze1 [1,974 kB]
+Get:8 http://security.debian.org/ squeeze/updates/main mysql-client-5.1 amd64 5.1.66-0+squeeze1 [10.1 MB]
+Get:9 http://security.debian.org/ squeeze/updates/main mysql-server-core-5.1 amd64 5.1.66-0+squeeze1 [4,141 kB]
+Get:10 http://security.debian.org/ squeeze/updates/main mysql-server-5.1 amd64 5.1.66-0+squeeze1 [6,613 kB]
+Get:11 http://security.debian.org/ squeeze/updates/main mysql-server all 5.1.66-0+squeeze1 [71.8 kB]
+Fetched 24.1 MB in 43s (561 kB/s)
+Preconfiguring packages ...
+Selecting previously deselected package mysql-common.
+(Reading database ... 25970 files and directories currently installed.)
+Unpacking mysql-common (from .../mysql-common_5.1.66-0+squeeze1_all.deb) ...
+Selecting previously deselected package libnet-daemon-perl.
+Unpacking libnet-daemon-perl (from .../libnet-daemon-perl_0.43-1_all.deb) ...
+Selecting previously deselected package libplrpc-perl.
+Unpacking libplrpc-perl (from .../libplrpc-perl_0.2020-2_all.deb) ...
+Selecting previously deselected package libdbi-perl.
+Unpacking libdbi-perl (from .../libdbi-perl_1.612-1_amd64.deb) ...
+Selecting previously deselected package libmysqlclient16.
+Unpacking libmysqlclient16 (from .../libmysqlclient16_5.1.66-0+squeeze1_amd64.deb) ...
+Selecting previously deselected package libdbd-mysql-perl.
+Unpacking libdbd-mysql-perl (from .../libdbd-mysql-perl_4.016-1_amd64.deb) ...
+Selecting previously deselected package mysql-client-5.1.
+Unpacking mysql-client-5.1 (from .../mysql-client-5.1_5.1.66-0+squeeze1_amd64.deb) ...
+Selecting previously deselected package mysql-server-core-5.1.
+Unpacking mysql-server-core-5.1 (from .../mysql-server-core-5.1_5.1.66-0+squeeze1_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up mysql-common (5.1.66-0+squeeze1) ...
+Selecting previously deselected package mysql-server-5.1.
+(Reading database ... 26348 files and directories currently installed.)
+Unpacking mysql-server-5.1 (from .../mysql-server-5.1_5.1.66-0+squeeze1_amd64.deb) ...
+Selecting previously deselected package libhtml-template-perl.
+Unpacking libhtml-template-perl (from .../libhtml-template-perl_2.9-2_all.deb) ...
+Selecting previously deselected package mysql-server.
+Unpacking mysql-server (from .../mysql-server_5.1.66-0+squeeze1_all.deb) ...
+Processing triggers for man-db ...
+Setting up libnet-daemon-perl (0.43-1) ...
+Setting up libplrpc-perl (0.2020-2) ...
+Setting up libdbi-perl (1.612-1) ...
+Setting up libmysqlclient16 (5.1.66-0+squeeze1) ...
+Setting up libdbd-mysql-perl (4.016-1) ...
+Setting up mysql-client-5.1 (5.1.66-0+squeeze1) ...
+Setting up mysql-server-core-5.1 (5.1.66-0+squeeze1) ...
+Setting up mysql-server-5.1 (5.1.66-0+squeeze1) ...
+Stopping MySQL database server: mysqld.
+130326 13:53:31 [Note] Plugin 'FEDERATED' is disabled.
+130326 13:53:31  InnoDB: Initializing buffer pool, size = 8.0M
+130326 13:53:31  InnoDB: Completed initialization of buffer pool
+130326 13:53:31  InnoDB: Started; log sequence number 0 44233
+130326 13:53:31  InnoDB: Starting shutdown...
+130326 13:53:36  InnoDB: Shutdown completed; log sequence number 0 44233
+Starting MySQL database server: mysqld.
+Checking for corrupt, not cleanly closed and upgrade needing tables..
+Setting up libhtml-template-perl (2.9-2) ...
+Setting up mysql-server (5.1.66-0+squeeze1) ...
+root@groupHad:/home/wongsl1# ^C
+root@groupHad:/home/wongsl1# ^C
+root@groupHad:/home/wongsl1# finger wongsl1
+bash: finger: command not found
+root@groupHad:/home/wongsl1# ls /home
+administrator  tclark  wongsl1
+root@groupHad:/home/wongsl1#
+root@groupHad:/home/wongsl1# adduser haydensmith
+Adding user `haydensmith' ...
+Adding new group `haydensmith' (1003) ...
+Adding new user `haydensmith' (1002) with group `haydensmith' ...
+Creating home directory `/home/haydensmith' ...
+Copying files from `/etc/skel' ...
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+Changing the user information for haydensmith
+Enter the new value, or press ENTER for the default
+        Full Name []: hayden smith
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] Y
+root@groupHad:/home/wongsl1# ls /home
+administrator  haydensmith  tclark  wongsl1
+root@groupHad:/home/wongsl1# adduser jbloggs
+Adding user `jbloggs' ...
+Adding new group `jbloggs' (1004) ...
+Adding new user `jbloggs' (1003) with group `jbloggs' ...
+Creating home directory `/home/jbloggs' ...
+Copying files from `/etc/skel' ...
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+Changing the user information for jbloggs
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] Y
+root@groupHad:/home/wongsl1# ls /home
+administrator  haydensmith  jbloggs  tclark  wongsl1
+root@groupHad:/home/wongsl1# adduser haydensmith sudo
+Adding user `haydensmith' to group `sudo' ...
+Adding user haydensmith to group sudo
+Done.
+root@groupHad:/home/wongsl1# ls /home
+administrator  haydensmith  jbloggs  tclark  wongsl1
+root@groupHad:/home/wongsl1# nano /etc/ssh/ssh_config
+root@groupHad:/home/wongsl1# nano /etc/ssh/sshd_config
+root@groupHad:/home/wongsl1# /etc/init.d/shh restart
+bash: /etc/init.d/shh: No such file or directory
+root@groupHad:/home/wongsl1# /etc/init.d/ssh restart
+Restarting OpenBSD Secure Shell server: sshd.
+root@groupHad:/home/wongsl1#

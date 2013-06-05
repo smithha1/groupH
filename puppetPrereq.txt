@@ -1,0 +1,143 @@
+login as: wongsl1
+wongsl1@10.25.1.84's password:
+Linux groupHbd 2.6.32-5-amd64 #1 SMP Sun Sep 23 10:07:46 UTC 2012 x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Wed Apr 17 16:43:00 2013 from d312-54564.op.ac.nz
+wongsl1@groupHbd:~$ apt-get
+apt 0.8.10.3 for amd64 compiled on Apr 15 2011 07:35:31
+Usage: apt-get [options] command
+       apt-get [options] install|remove pkg1 [pkg2 ...]
+       apt-get [options] source pkg1 [pkg2 ...]
+
+apt-get is a simple command line interface for downloading and
+installing packages. The most frequently used commands are update
+and install.
+
+Commands:
+   update - Retrieve new lists of packages
+   upgrade - Perform an upgrade
+   install - Install new packages (pkg is libc6 not libc6.deb)
+   remove - Remove packages
+   autoremove - Remove automatically all unused packages
+   purge - Remove packages and config files
+   source - Download source archives
+   build-dep - Configure build-dependencies for source packages
+   dist-upgrade - Distribution upgrade, see apt-get(8)
+   dselect-upgrade - Follow dselect selections
+   clean - Erase downloaded archive files
+   autoclean - Erase old downloaded archive files
+   check - Verify that there are no broken dependencies
+   markauto - Mark the given packages as automatically installed
+   unmarkauto - Mark the given packages as manually installed
+
+Options:
+  -h  This help text.
+  -q  Loggable output - no progress indicator
+  -qq No output except for errors
+  -d  Download only - do NOT install or unpack archives
+  -s  No-act. Perform ordering simulation
+  -y  Assume Yes to all queries and do not prompt
+  -f  Attempt to correct a system with broken dependencies in place
+  -m  Attempt to continue if archives are unlocatable
+  -u  Show a list of upgraded packages as well
+  -b  Build the source package after fetching it
+  -V  Show verbose version numbers
+  -c=? Read this configuration file
+  -o=? Set an arbitrary configuration option, eg -o dir::cache=/tmp
+See the apt-get(8), sources.list(5) and apt.conf(5) manual
+pages for more information and options.
+                       This APT has Super Cow Powers.
+wongsl1@groupHbd:~$ apt-get ntp
+E: Invalid operation ntp
+wongsl1@groupHbd:~$ apt-get ntpdate
+E: Invalid operation ntpdate
+wongsl1@groupHbd:~$ sudo apt-get install ntp
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for wongsl1:
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  libopts25
+Suggested packages:
+  ntp-doc
+The following NEW packages will be installed:
+  libopts25 ntp
+0 upgraded, 2 newly installed, 0 to remove and 21 not upgraded.
+Need to get 566 kB of archives.
+After this operation, 1,303 kB of additional disk space will be used.
+Do you want to continue [Y/n]? Y
+Get:1 http://ftp.nz.debian.org/debian/ squeeze/main libopts25 amd64 1:5.10-1.1 [66.6 kB]
+Get:2 http://ftp.nz.debian.org/debian/ squeeze/main ntp amd64 1:4.2.6.p2+dfsg-1+b1 [499 kB]
+Fetched 566 kB in 0s (2,319 kB/s)
+Selecting previously deselected package libopts25.
+(Reading database ... 28656 files and directories currently installed.)
+Unpacking libopts25 (from .../libopts25_1%3a5.10-1.1_amd64.deb) ...
+Selecting previously deselected package ntp.
+Unpacking ntp (from .../ntp_1%3a4.2.6.p2+dfsg-1+b1_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up libopts25 (1:5.10-1.1) ...
+Setting up ntp (1:4.2.6.p2+dfsg-1+b1) ...
+Starting NTP server: ntpd.
+wongsl1@groupHbd:~$ sudo apt-get install ntpdate
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  lockfile-progs
+The following NEW packages will be installed:
+  lockfile-progs ntpdate
+0 upgraded, 2 newly installed, 0 to remove and 21 not upgraded.
+Need to get 90.7 kB of archives.
+After this operation, 238 kB of additional disk space will be used.
+Do you want to continue [Y/n]? Y
+Get:1 http://ftp.nz.debian.org/debian/ squeeze/main ntpdate amd64 1:4.2.6.p2+dfsg-1+b1 [80.0 kB]
+Get:2 http://ftp.nz.debian.org/debian/ squeeze/main lockfile-progs amd64 0.1.15+squeeze1 [10.7 kB]
+Fetched 90.7 kB in 0s (652 kB/s)
+Selecting previously deselected package ntpdate.
+(Reading database ... 28698 files and directories currently installed.)
+Unpacking ntpdate (from .../ntpdate_1%3a4.2.6.p2+dfsg-1+b1_amd64.deb) ...
+Selecting previously deselected package lockfile-progs.
+Unpacking lockfile-progs (from .../lockfile-progs_0.1.15+squeeze1_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up ntpdate (1:4.2.6.p2+dfsg-1+b1) ...
+Setting up lockfile-progs (0.1.15+squeeze1) ...
+wongsl1@groupHbd:~$ ls
+wongsl1@groupHbd:~$ /etc/network/if-up.d/ntpdate
+wongsl1@groupHbd:~$ /etc
+-bash: /etc: is a directory
+wongsl1@groupHbd:~$ ls
+wongsl1@groupHbd:~$ -ls
+-bash: -ls: command not found
+wongsl1@groupHbd:~$ ls -l
+total 0
+wongsl1@groupHbd:~$ /etc
+-bash: /etc: is a directory
+wongsl1@groupHbd:~$ cd etc
+-bash: cd: etc: No such file or directory
+wongsl1@groupHbd:~$ /etc/network/of-up.d/ntpdate
+-bash: /etc/network/of-up.d/ntpdate: No such file or directory
+wongsl1@groupHbd:~$ /etc/network/of-up.d/ntpdate
+-bash: /etc/network/of-up.d/ntpdate: No such file or directory
+wongsl1@groupHbd:~$ /etc/network/if-up.d/ntpdate
+wongsl1@groupHbd:~$ /etc/hosts
+-bash: /etc/hosts: Permission denied
+wongsl1@groupHbd:~$ nano etc/hosts
+wongsl1@groupHbd:~$ nano /etc/hosts
+wongsl1@groupHbd:~$ nano /etc/hosts
+wongsl1@groupHbd:~$ sudo cp /home/wongsl1/hosts /etc/hosts
+[sudo] password for wongsl1:
+wongsl1@groupHbd:~$
